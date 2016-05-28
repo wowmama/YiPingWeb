@@ -1,0 +1,37 @@
+<nav class="subMenu">
+	<div class="subMenuButton">新增訂單</div>
+	<div class="subMenuButton">訂單查詢</div>
+	<div class="clearDiv"></div>
+</nav>
+<section class="subSetion">
+	<div class="searchDiv">
+		<div class="searchBox"><label for="cusName">客戶名稱 : </label> <input type="text" id="cusName"/></div> 
+		<div class="searchBox"><label for="cusPhone">連絡電話 : </label> <input type="text" id="cusPhone"/></div> 
+		<div class="searchBox"><label for="orderDate">取貨時間 : </label> <input type="date" id="orderDate"/></div>
+		<div class="searchBox"><button>查詢</button></div>
+		<div class="clearDiv"></div>
+	</div>
+	
+		<table class="listTable">
+			<thead>
+					<th>編號</th>
+					<th>客戶名稱</th>
+					<th>連絡電話</th>
+					<th>訂單編號</th>
+					<th>取貨時間</th>
+					<th>訂單狀態</th>
+					<th>詳細資料</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat=" order in orderCtr.orderList">
+					<td>{{$index+1}}</td>
+					<td>{{order.customer100.cusName}}</td>
+					<td>{{order.customer100.cusPhone}}</td>
+					<td>{{order.order100Id}}</td>
+					<td>{{order.pickupTime}}</td>
+					<td>{{order.orderStatus.statusName}}</td>
+					<td><button>查詢</button></td>
+				</tr>
+			</tbody>
+		</table>
+</section>
