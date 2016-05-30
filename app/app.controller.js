@@ -8,6 +8,22 @@
 
 	function MainController($mdSidenav) {
 
+
+	  var vm = this;
+	  vm.openLeftNav = openLeftNav;
+	  vm.closeLeftNav = closeLeftNav;
+
+
+
+
+
+	  function openLeftNav() {
+	  	$mdSidenav('left').open();
+	  	console.log('hihi');
+	  }
+	  function closeLeftNav() {
+	  	$mdSidenav('left').close();
+	  }
 	}
 
 })();

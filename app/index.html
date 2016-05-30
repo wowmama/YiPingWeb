@@ -11,7 +11,7 @@
 		
 		<title>一品肉粽</title>
 	</HEAD>
-	<BODY>
+	<BODY layout="column" ng-app="app" ng-controller="MainController as vm">
 		<!-- <div id="bigWrapper" ng-controller="MainController as main">
 			<header id="mainHeader">
 				一品肉粽
@@ -28,12 +28,12 @@
 		</div> -->
 		    
 	<md-content>  
-		<md-toolbar layout="row">
+		<md-toolbar layout="row"  class="md-primary">
 	      <div class="md-toolbar-tools">
-	        <md-button  aria-label="Settings">
+	        <md-button  aria-label="Menu" ng-click="vm.openLeftNav()">
 	          <i class="material-icons">menu</i>
 	        </md-button>
-            <span>YiPingWeb</span>
+            <span>一品肉粽</span>
       		<!-- fill up the space between left and right area -->
 	        <span flex></span>
 	        <md-button>
@@ -42,18 +42,27 @@
     	  </div>
 	     </md-toolbar>
 	</md-content>
-	<md-content>
-		<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-open="true">
-	      <md-content layout="column">
-	        <a>a</a>
-	        <a>b</a>
-	        <a>c</a>
-	        <a>d</a>
-	      </md-content>
 
-	    </md-sidenav>
+	<md-content  ng-view flex>
 	</md-content>
 
+	<md-sidenav class="md-sidenav-left" md-component-id="left">
+		<md-toolbar layout="row" class="md-primary md-hue-2">
+	      <div class="md-toolbar-tools">
+	        <span>功能選單</span>
+      		<!-- fill up the space between left and right area -->
+	        <span flex></span>
+	        <md-button aria-label="close nav" ng-click="vm.closeLeftNav()">
+	          <i class="material-icons" ng-style="{'font-size': '36px'}">navigate_before</i>
+	        </md-button>
+    	  </div>
+	     </md-toolbar>
+	      <md-content layout="column" layout-align="space-around stretch">
+	        <md-button class="md-primary">訂單管理</md-button>
+	        <md-button class="md-primary">商品管理</md-button>
+	        <md-button class="md-primary">庫存管理</md-button>
+	      </md-content>
+	</md-sidenav>
 	<BODY>
 
 	<script src="/bower_components/angular/angular.js"></script>
@@ -65,6 +74,13 @@
 
 
 	<script src="/app.module.js"></script>
+	<script src="/app.controller.js"></script>
+
+	<!-- product -->
+	<script src="/product/product.module.js"></script>
+	<script src="/product/product.service.js"></script>
+	<script src="/product/productsController.controller.js"></script>
+	<script src="/product/productDetailController.controller.js"></script>
 
 </HTML>
 <!--template.html-->
