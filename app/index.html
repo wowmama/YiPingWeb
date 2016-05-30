@@ -29,25 +29,36 @@
 		    
 	<md-content>  
 		<md-toolbar layout="row">
-	        <div>
-	         <md-button class="md-icon-button" aria-label="Settings">
-	         	<i class="material-icons">menu</i>
+	      <div class="md-toolbar-tools">
+	        <md-button  aria-label="Settings">
+	          <i class="material-icons">menu</i>
 	        </md-button>
-	        
-	        </div>
-	        <div>
-	        	 <h2>	
-	        
-	          <span>一品肉粽</span>
-	        </h2>
-	        </div>
-	       
-	    </md-toolbar>
-
+            <span>YiPingWeb</span>
+      		<!-- fill up the space between left and right area -->
+	        <span flex></span>
+	        <md-button>
+	          Logout
+	        </md-button>
+    	  </div>
+	     </md-toolbar>
 	</md-content>
+	<md-content>
+		<md-sidenav class="md-sidenav-left" md-component-id="left" md-is-open="true">
+	      <md-content layout="column">
+	        <a>a</a>
+	        <a>b</a>
+	        <a>c</a>
+	        <a>d</a>
+	      </md-content>
+
+	    </md-sidenav>
+	</md-content>
+
 	<BODY>
 
 	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.min.js"></script>
 	<script src="/bower_components/angular-material/angular-material.min.js"></script>
 	<script src="/bower_components/angular-route/angular-route.js"></script>
 

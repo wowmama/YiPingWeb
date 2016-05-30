@@ -4,12 +4,14 @@
   });
 
   angular
-    .module('app',['ngRoute'])
+    .module('app',['ngRoute', 'ngMaterial'])
     .config(Config);
 
-  Config.$inject = ['$routeProvider', '$httpProvider'];
-  function Config($routeProvider, $httpProvider) {
-
+  Config.$inject = ['$routeProvider', '$httpProvider', '$mdThemingProvider'];
+  function Config($routeProvider, $httpProvider, $mdThemingProvider) {
+    $mdThemingProvider
+      .theme('default')
+      .dark();
   }
 
 })();
