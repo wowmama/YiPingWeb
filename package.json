@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "YiPingWeb app",
   "main": "index.js",
-
   "scripts": {
     "postinstall": "bower install",
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000 -c-1 ./app"
   },
-
   "devDependencies": {
     "bower": "^1.7.7",
     "http-server": "^0.9.0",
@@ -22,7 +20,6 @@
     "protractor": "^3.2.2",
     "shelljs": "^0.6.0"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wowmama/YiPingWeb.git"
@@ -33,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/wowmama/YiPingWeb/issues"
   },
-  "homepage": "https://github.com/wowmama/YiPingWeb#readme"
+  "homepage": "https://github.com/wowmama/YiPingWeb#readme",
+  "dependencies": {
+    "ng-material-floating-button": "^0.6.2"
+  }
 }
