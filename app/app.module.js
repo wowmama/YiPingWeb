@@ -4,7 +4,7 @@
   // });
 
   angular
-    .module('app',['ngRoute', 'ngMaterial', 'product'])
+    .module('app',['ngRoute', 'ngMaterial', 'product', 'md.data.table'])
     .config(Config);
 
   Config.$inject = ['$routeProvider', '$httpProvider', '$mdThemingProvider'];

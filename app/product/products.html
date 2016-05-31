@@ -1,9 +1,34 @@
 
-<table>
-	<tr ng-repeat="product in vm.products">
-		<td>{{product.product100Id}}</td>
-		<td>{{product.productName}}</td>
-		<td>{{product.productPrice}}</td>
-		<td>{{product.productDetail}}</td>
-	</tr>
-</table>
+
+
+<md-table-container>
+  <table md-table md-row-select multiple ng-model="vm.selected">
+    <thead md-head md-order="query.order">
+      <tr md-row>
+        <th md-column md-numeric>編號</th>
+        <th md-column md-numeric>商品名稱</th>
+        <th md-column md-numeric>商品價格</th>
+        <th md-column md-numeric>商品描述</th>
+        <th md-column md-numeric>編輯</th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-auto-select md-on-select="vm.onProductSelected" md-select="product" ng-repeat="product in vm.products">
+        <td md-cell>{{product.product100Id}}</td>
+        <td md-cell>{{product.productName}}</td>
+        <td md-cell>{{product.productPrice}}</td>
+        <td md-cell>{{product.productDetail}}</td>
+        <td md-cell>
+        	<md-button  aria-label="Edit">
+	          編輯
+	        </md-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<!-- <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{product.length}}" md-page-select></md-table-pagination> -->
+<md-button class="md-fab md-mini md-primary" aria-label="New Product" md-direction="right">
+    test
+</md-button>
