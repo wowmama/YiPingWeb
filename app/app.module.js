@@ -23,11 +23,7 @@
   }
 
   function Run() {
-    angular
-      .element(document)
-      .on('scroll', function() {
-          alert('scroll');
-      });
+    
   }
 
 })();

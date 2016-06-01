@@ -25,7 +25,7 @@
 </md-table-container>
 
 <md-table-pagination flex md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{product.length}}" md-page-select></md-table-pagination>
-<div class="my-floating-button" show-when-scroll>
+<div class="my-floating-button" show-when-scroll ng-class="{display: boolChangeClass}">
  <md-fab-speed-dial md-open="vm.isOpen" md-direction="vm.mdDirection"
                          ng-class="vm.selectedMode">
         <md-fab-trigger layout-padding>
