@@ -1,6 +1,9 @@
 
+<div flex="10" layout="row" layout-sm="column" layout-align="center" >
+    <md-button flex="100" class="md-raised" ng-click="showListBottomSheet()">新增</md-button>
+</div>
 
-<md-table-container flex >
+<md-table-container>
   <table md-table >
     <thead md-head md-order="query.order">
       <tr md-row>
@@ -18,7 +21,7 @@
         <td md-cell>{{product.productPrice}}</td>
         <td md-cell>{{product.productDetail}}</td>
         <td md-cell>
-        	<md-button  aria-label="Edit">
+        	<md-button  class="md-raised" aria-label="Edit">
 	          編輯
 	        </md-button>
         </td>
@@ -28,8 +31,13 @@
 </md-table-container>
 
 <md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{product.length}}" md-page-select></md-table-pagination>
-<ul mfb-menu position="br" effect="zoomin" main-action="fireMainAction()">
 
-</ul>
+<!-- <footer class="move-up">
+  <div class="mfb-component__wrap" flex layout-align="space-around start" layout-padding >
+    <md-button class="md-raised md-fab md-primary">
+      <i class="material-icons" ng-style="{'font-size': '36px'}">add</i>
+    </md-button>   
+  </div>
+</footer> -->
 
 
