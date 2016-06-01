@@ -4,8 +4,9 @@
   // });
 
   angular
-    .module('app',['ngRoute', 'ngMaterial', 'product', 'md.data.table', 'ng-mfb'])
-    .config(Config);
+    .module('app',['ngRoute', 'ngMaterial', 'product', 'md.data.table', 'ng-mfb', 'myDirective'])
+    .config(Config)
+    .run(Run);
 
   Config.$inject = ['$routeProvider', '$httpProvider', '$mdThemingProvider'];
   function Config($routeProvider, $httpProvider, $mdThemingProvider) {
@@ -19,6 +20,14 @@
     //   'hue-2': '600', // use shade 600 for the <code>md-hue-2</code> class
     //   'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
     // })
+  }
+
+  function Run() {
+    angular
+      .element(document)
+      .on('scroll', function() {
+          alert('scroll');
+      });
   }
 
 })();

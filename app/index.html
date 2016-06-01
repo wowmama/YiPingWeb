@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+		<link rel="stylesheet" href="app.css"/>
 		<link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css"/>
 		<link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.min.css"/>
 		<link rel="stylesheet" href="bower_components/ng-material-floating-button/mfb/dist/mfb.min.css"/>
@@ -13,7 +14,7 @@
 		
 		<title>YiPingWeb</title>
 	</HEAD>
-	<BODY layout="column" ng-app="app" ng-controller="MainController as vm">
+	<BODY layout="column" ng-app="app" ng-controller="MainController as vm" show-when-scroll>
 		    
 	<md-content>  
 		<md-toolbar layout="row"  class="md-primary">
@@ -48,7 +49,7 @@
 	      </md-content>
 	</md-sidenav>
 
-	<md-content  ng-view flex layout="column">
+	<md-content  ng-view flex layout="column" layout-padding>
 	</md-content>
 	<!-- <footer class="md-primary">
         <div layout="row" layout-align="center center">
@@ -71,6 +72,9 @@
 
 	<script src="/app.module.js"></script>
 	<script src="/app.controller.js"></script>
+
+	<!-- directive -->
+	<script src="/directive/directive.module.js"></script>
 
 	<!-- product -->
 	<script src="/product/product.module.js"></script>

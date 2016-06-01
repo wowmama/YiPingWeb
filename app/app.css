@@ -1,6 +1,7 @@
-.move-up {
-  position: relative;
-  top: -60px;
+.my-floating-button {
+  position: absolute;
+  right: 0;
+  top: 0;
   z-index: 99;
   float: left;
 }

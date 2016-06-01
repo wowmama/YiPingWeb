@@ -1,9 +1,9 @@
 
-<div flex="10" layout="row" layout-sm="column" layout-align="center" >
+<!-- <div flex="10%" layout="row" layout-sm="column" layout-align="center" >
     <md-button flex="100" class="md-raised" ng-click="showListBottomSheet()">新增</md-button>
-</div>
+</div> -->
 
-<md-table-container>
+<md-table-container flex="90" >
   <table md-table >
     <thead md-head md-order="query.order">
       <tr md-row>
@@ -11,7 +11,6 @@
         <th md-column md-numeric>商品名稱</th>
         <th md-column md-numeric>商品價格</th>
         <th md-column md-numeric>商品描述</th>
-        <th md-column md-numeric>編輯</th>
       </tr>
     </thead>
     <tbody md-body>
@@ -20,17 +19,37 @@
         <td md-cell>{{product.productName}}</td>
         <td md-cell>{{product.productPrice}}</td>
         <td md-cell>{{product.productDetail}}</td>
-        <td md-cell>
-        	<md-button  class="md-raised" aria-label="Edit">
-	          編輯
-	        </md-button>
-        </td>
       </tr>
     </tbody>
   </table>
 </md-table-container>
 
-<md-table-pagination md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{product.length}}" md-page-select></md-table-pagination>
+<md-table-pagination flex md-limit="query.limit" md-limit-options="[5, 10, 15]" md-page="query.page" md-total="{{product.length}}" md-page-select></md-table-pagination>
+<div class="my-floating-button">
+ <md-fab-speed-dial md-open="vm.isOpen" md-direction="vm.mdDirection"
+                         ng-class="vm.selectedMode">
+        <md-fab-trigger layout-padding>
+          <md-button aria-label="Add" class="md-fab md-primary md-raised">
+            <i class="material-icons" ng-style="{'font-size': '36px'}">add</i>
+          </md-button>
+        </md-fab-trigger>
+        <!-- <md-fab-actions>
+          <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
+            <md-icon md-svg-src="img/icons/twitter.svg" aria-label="Twitter"></md-icon>
+          </md-button>
+          <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
+            <md-icon md-svg-src="img/icons/facebook.svg" aria-label="Facebook"></md-icon>
+          </md-button>
+          <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
+            <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
+          </md-button>
+        </md-fab-actions> -->
+  </md-fab-speed-dial>
+  <!-- <md-button class="md-raised md-fab md-primary">
+      <i class="material-icons" ng-style="{'font-size': '36px'}">add</i>
+  </md-button>    -->
+</div>
+
 
 <!-- <footer class="move-up">
   <div class="mfb-component__wrap" flex layout-align="space-around start" layout-padding >
